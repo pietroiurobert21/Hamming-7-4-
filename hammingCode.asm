@@ -81,9 +81,8 @@
 				call paritate
 		;bit1
 			mov dl, A1
-			add dl, 48
-			mov ah, 02h
-			int 21h
+			call usefulBit
+
 		;bitParitate3
 				mov suma, 0
 		
@@ -99,23 +98,25 @@
 				div doi			
 				
 				call paritate
+		
 		;bit2
 			mov dl, A2
-			add dl, 48
-			mov ah, 02h
-			int 21h
+			call usefulBit
 		;bit3
-			mov dl, A3
-			add dl, 48
-			mov ah, 02h
-			int 21h
+			mov dl, A3	
+			call usefulBit
 		;bit4
 			mov dl, A4
+			call usefulBit
+
+		jmp Fin
+			
+		usefulBit proc
 			add dl, 48
 			mov ah, 02h
 			int 21h
-		
-		jmp Fin
+		endp
+		ret
 		
 			paritate proc		
 				cmp ah, 0		;vedem daca (suma%2==0)
