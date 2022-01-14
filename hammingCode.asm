@@ -6,6 +6,8 @@
 	suma   db   0		; variabila suma o folosesc ca sa vad ce valoare va avea bitul de paritate (adica daca suma este para, va afisa 0 si 1 in caz contrar)
 	doi    db   2		; variabila doi o folosesc pentru verificarea paritatii fiecarei sume de biti (adica impart suma la 2 si verific restul)
 	
+	mesaj db 'Codul Hamming este: $'
+	
 	;cei 4 biti cititi
 	A1 db 0	
 	A2 db 0
@@ -49,7 +51,11 @@
 		
 				pop ax
 				mov A1, al		
-				
+		
+		mov dx, offset mesaj
+		mov ah, 09h
+		int 21h
+		
 		;bitParitate1
 		
 				mov bl, A1
