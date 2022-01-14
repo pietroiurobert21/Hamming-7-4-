@@ -14,7 +14,7 @@ Hamming code for 4 given bits
 		;____________________________
 		; p1  p2  A1  p3  A2  A3  A4
 		
-		; "teorema" ne spune ca va trebui sa inmultim matricea cu vectorul coloana v={p1,p2,A1,p3,A2,A3}
+		; "teorema" ne spune ca va trebui sa inmultim matricea cu vectorul coloana v={p1,p2,A1,p3,A2,A3,A4}
 		
 		; practic va rezulta un alt vector coloana de forma 
 		; k:{
