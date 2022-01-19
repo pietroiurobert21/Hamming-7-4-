@@ -31,11 +31,11 @@
 					mov ah, 0
 					sub al, 48
 					push ax
-					mov bl, al
-					mov al, dl
-					mul cl
-					add ax, bx
-					mov dx, ax
+					mov bl, al  ; bl = cifra
+					mov al, dl  ; 
+					mul cl	    ; 
+					add ax, bx  ; copie = numar*10 + cifra
+					mov dx, ax  ; numar = copie
 					jmp citireNr
 				
 				amTerminat:
